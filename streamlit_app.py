@@ -19,7 +19,7 @@ import os
 
 # Function to load default data
 def load_default_data():
-    df = pd.read_csv("data/readmission_data.csv")
+    df = pd.read_csv("readmission_data.csv")
     df.columns = df.columns.str.lower().str.replace(' ', '_')
     return df.copy()  # Return a copy to avoid mutation
 
@@ -57,7 +57,7 @@ def home():
     st.markdown('<h1 class="title">Health + Hospitals Data Analysis App</h1>', unsafe_allow_html=True)
 
     # Autoplay video using Streamlit video with autoplay argument
-    video_file = open('data/nychh_intro.mp4', 'rb')
+    video_file = open('nychh_intro.mp4', 'rb')
     video_bytes = video_file.read()
     st.video(video_bytes, format='video/mp4', start_time=0)
 
